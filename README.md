@@ -43,7 +43,6 @@ Welcome to the NEONE Server Setup, in this document you will find the instructio
    [+] Running 6/6
     ✔ Network docker-compose_default            Created
     ✔ Container docker-compose-graph-db-1       Healthy
-    ✔ Container neone-notification-handler-1  Started
     ✔ Container docker-compose-graph-db-setup-1 Started
     ✔ Container docker-compose-ne-one-server-1  Healty
     ✔ Container neone-ne-one-play-1             Started
@@ -62,5 +61,5 @@ Welcome to the NEONE Server Setup, in this document you will find the instructio
 | ne-one-view | [ne-one view](https://git.openlogisticsfoundation.org/wg-digitalaircargo/ne-one-view) | http://{baseUrl}:3000 |
 | ne-one-play | [ne-one play](https://github.com/aloccid-iata/neoneplay) | http://{baseUrl}:3001 |
 | graphdb | GraphDB database as database backend for ne-one-1 repository neone | http://{baseUrl}:7200 |
-| notification-handler | A Flask app (python) that processes incoming notifications | http://{baseUrl}:5000 |
+
 

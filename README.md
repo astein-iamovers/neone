@@ -62,8 +62,8 @@ The NEONE Server stores notifications as objects and allows you to forward them 
         
     
    ```
-7) Try to access the ONE Record Server by http://{BASE_1R_HOST}:8080 using your favorite browser. Accessing http://{BASE_1R_HOST}:8080 in your browser should return an HTTP 401 error, indicating the server is running but requires authentication. This confirms the NEONE server is correctly set up. 
-   You should see a HTTP Error 401, because you did not authenticate yet. But this confirms that the ONE Record Server is up and running.
+7) Try to access the ONE Record Server by http://{BASE_1R_HOST}:8080 using your favorite browser (replace with your BASE_1R_HOST).
+You should get an HTTP 401 error, indicating the server is running but requires authentication. This confirms the NEONE server is correctly set up.
 
 # Overview of services
 

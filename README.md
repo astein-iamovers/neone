@@ -29,7 +29,7 @@ Follow the instructions on the neone-make repository if you'd like to process no
    ```bash
    cd neone
    ```
-   If you have Mac or Linux, please reset folder permissions 
+3) If you have Mac or Linux, please reset folder permissions to allow cross-container dependencies.
    ```bash
    chmod -R 755 ./
    ```

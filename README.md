@@ -1,17 +1,18 @@
 # NEONE Server Setup
 
-Welcome to the NEONE Server Setup, in this document you will find the instructions to run a NE:ONE server using your own notification endpoint.
+Welcome to the NEONE Server Setup. In this document, you will find the instructions to run a NEONE server using your own notification endpoint.
 
-The [neone-make repository](https://github.com/astein-iamovers/neone-make) is an alternative configuration allowing you to forward notifications to the automation platform Make, using Make webhooks. This can also be done with Zappier webhooks. These platforms give you the flexibility to process the notification and implement workflows according to your needs.
+Check these alternative configurations to handle notifications:
+
+- [neone-make repository](https://github.com/astein-iamovers/neone-make) allows you to forward notifications to the automation platform Make, using Make webhooks. This can also be done with Zapier webhooks. These platforms give you the flexibility to process the notifications and implement workflows according to your needs.
+- [neone-flask repository](https://github.com/astein-iamovers/neone-flask) provides a customizable Flask application to receive and process notifications directly. This option is ideal for companies that prefer to manage notifications within their own infrastructure, offering full control and flexibility over notification handling.
+
 
 ## Notifications
 
-ONE Record requires each server to implement a notifications endpoint to receive notifications from other ONE Record servers. The NEONE server already includes this. However, processing the notification and updating your systems is outside the ONE Record scope, as each company needs the flexibility to implement its own rules.
-The NEONE Server stores notifications as objects and allows you to forward them to your own custom NOTIFICATION_ENDPOINT. In the current version, NEONE expects the notification endpoint to end with "/notifications". When creating your endpoint, please ensure this structure is followed.
+ONE Record requires each server to implement a notifications endpoint to receive notifications from other ONE Record servers. While the NEONE server includes a notifications endpoint, processing and integrating notifications into your systems is beyond the scope of ONE Record. This flexibility allows companies to define their own rules and workflows for handling notifications.
 
-Make or Zappier's webhooks do not contain this "/notifications" suffix so a workaround is required, using a proxy service, Caddy, to receive these notifications and forward them to the Make Webhook.
-
-Follow the instructions on the neone-make repository if you'd like to process notifications with Make.
+The NEONE Server stores notifications as objects and allows you to forward them to your own custom NOTIFICATION_ENDPOINT. In the current version, NEONE expects the notification endpoint to end with /notifications. When creating your endpoint, please ensure this structure is followed.
 
 ## Prerequisites
 
@@ -55,13 +56,13 @@ Follow the instructions on the neone-make repository if you'd like to process no
     ✔ Network docker-compose_default            Created
     ✔ Container docker-compose-graph-db-1       Healthy
     ✔ Container docker-compose-graph-db-setup-1 Started
-    ✔ Container docker-compose-ne-one-server-1  Healty
+    ✔ Container docker-compose-ne-one-server-1  Healthy
     ✔ Container neone-ne-one-play-1             Started
     ✔ Container neone-ne-one-view-1             Started
         
     
    ```
-7) Try to access the ONE Record Server by http://{BASE_1R_HOST}:8080 using your favorite browser. 
+7) Try to access the ONE Record Server by http://{BASE_1R_HOST}:8080 using your favorite browser. Accessing http://{BASE_1R_HOST}:8080 in your browser should return an HTTP 401 error, indicating the server is running but requires authentication. This confirms the NEONE server is correctly set up. 
    You should see a HTTP Error 401, because you did not authenticate yet. But this confirms that the ONE Record Server is up and running.
 
 # Overview of services

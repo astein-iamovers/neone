@@ -52,7 +52,7 @@ The NEONE Server stores notifications as objects and allows you to forward them 
    ```
 6) Wait until all containers are up and running:
    ```bash
-   [+] Running 6/6
+   [+] Running 5/5
     ✔ Network docker-compose_default            Created
     ✔ Container docker-compose-graph-db-1       Healthy
     ✔ Container docker-compose-graph-db-setup-1 Started
